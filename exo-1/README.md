@@ -7,7 +7,8 @@
 ---
 
 ### Syntaxe ES6
-Les exercices de ce projet utilise `var` pour déclarer les variables. Depuis ES6, il y a deux autres manières de déclarer des variables : avec `let` et avec `const`.
+
+Les exercices de ce projet utilisent `var` pour déclarer les variables. Depuis ES6, il y a deux autres manières de déclarer des variables : avec `let` et avec `const`.
 
 Nous vous recommandons, si vous êtes à l'aise, d'utiliser `let` et `const` (selon les cas) à la place de `var`. Ces articles vous feront découvrir les différences entre les trois types de variable :
 

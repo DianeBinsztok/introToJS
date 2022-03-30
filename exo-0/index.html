@@ -91,7 +91,12 @@
 
         /* Section 3 */
 
-        // console.log(myVariable);
+        console.log(myVariable);// renvoie une erreur car myVariable n'est pas déclarée
+
+        // Si je déclare ma variable après le log, le log précédent renvoie juste 'Undefined', sans erreur cette fois
+        var myVariable = "Slip de bain !";
+        // le log suivant renvoie la nouvelle valeur de myVariable
+        console.log(myVariable);
 
     </script>
 
