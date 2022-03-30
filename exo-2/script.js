@@ -10,15 +10,30 @@ console.log(myDate);
 const weekMsg = "Nous sommes en semaine!";
 const weekendMsg = "C'est le weekend!";
 
+// Ce jour:
 let today = myDate.getDay();
-console.log(today);
 
+// Cette heure:
+let now = myDate.getHours();
+
+// Je vérifie l'heure
+function fridayNightFever(hour) {
+    if (hour >= 17) {
+        return true;
+    } else {
+        return false;
+    }
+}
+const weekendStart = fridayNightFever(now);
+
+// en fonction du jour et de la condition weekendStart, je vérifie si c'est le weekend:
 function checkWeekDay(day) {
-    if ((day === 7) || (day === 0)) {
+    // Si nous sommes samedi OU dimanche OU vendredi après 17h
+    if ((day === 7) || (day === 0) || (day===6 && weekendStart)) {
         console.log(weekendMsg);
     } else {
         console.log(weekMsg);
     }
 }
 
-checkWeekDay(today);
+checkWeekDay(0);
