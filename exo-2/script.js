@@ -12,3 +12,13 @@ const weekendMsg = "C'est le weekend!";
 
 let today = myDate.getDay();
 console.log(today);
+
+function checkWeekDay(day) {
+    if ((day === 7) || (day === 0)) {
+        console.log(weekendMsg);
+    } else {
+        console.log(weekMsg);
+    }
+}
+
+checkWeekDay(today);
