@@ -9,21 +9,36 @@
 
 // Une fonction pour convertir les kelvins en celsius
 function convKelvinToCelsius(kelvin) {
-    console.log("La température est de ", celsius = kelvin - 273, "°C");
+    const celsius = kelvin - 273
     return celsius;
 }
 // Une fonction pour convertir les degrés celsius en farenheits
 function convCelsiusToFarenheits(celsius) {
     // la variable farenheits est un arrondi à la décimale inférieure de la conversion de celsius
-    console.log("La température est de ", farenheits = Math.floor(celsius * (9/5) + 32), "°F");
+    const  farenheits = Math.floor(celsius * (9/5) + 32)
     return farenheits;
 }
+
+function convInputKelvins() {
+    // récupérer l'input, le convertir en entier le mettre dans la constante kelvins
+    const kelvins = Number(prompt("Quelle est la température en Kelvins aujourd'hui ?"));
+    const celsius = convKelvinToCelsius(kelvins);
+    const farenheits = convCelsiusToFarenheits(celsius);
+    return {
+        kelvins : kelvins,
+        celsius: celsius,
+        farenheits : farenheits
+    };
+}
+
 // J'exécute la fonction convKelvinToCelsius
-convKelvinToCelsius(300);
-// je vérifie qu'elle a bien revoyé la valeur de celsiusTemp
-console.log(celsius);
+const celsius = convKelvinToCelsius(300);
+console.log("La température est de ", celsius, "°C");
 
 // J'exécute la fonction convCelsiusToFarenheits
-convCelsiusToFarenheits(27);
-// je vérifie qu'elle a bien revoyé la valeur de farenheitsTemp
-console.log(farenheits);
+const farenheits = convCelsiusToFarenheits(27);
+console.log("La température est de ",farenheits , "°F");
+
+// J'exécute la fonction convCelsiusToFarenheits
+const temperatures = convInputKelvins()
+console.log("La température est de: ", temperatures.kelvins, "°K, ", temperatures.celsius, "°C et ", temperatures.farenheits, "°F");
