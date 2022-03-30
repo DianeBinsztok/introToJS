@@ -1,2 +1,10 @@
-// you can write js here
-console.log('exo-3');
+// demander le choix utilisateur
+var playerInput = prompt("Your choice ( rock, paper, scissors) ?");
+
+// traiter l'input
+function getPlayerChoice(input) {
+    let lowerCaseInput = input.toLowerCase();
+    console.log(lowerCaseInput);
+}
+
+getPlayerChoice(playerInput);
