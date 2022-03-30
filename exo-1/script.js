@@ -14,8 +14,8 @@ function convKelvinToCelsius(kelvin) {
 }
 // Une fonction pour convertir les degrés celsius en farenheits
 function convCelsiusToFarenheits(celsius) {
-    // la variable farenheits est un arrondi à la décimale supérieure de la conversion de celsius
-    console.log("La température est de ", farenheits = Math.round(celsius * (9/5) + 32), "°F");
+    // la variable farenheits est un arrondi à la décimale inférieure de la conversion de celsius
+    console.log("La température est de ", farenheits = Math.floor(celsius * (9/5) + 32), "°F");
     return farenheits;
 }
 // J'exécute la fonction convKelvinToCelsius
