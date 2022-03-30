@@ -28,7 +28,7 @@ Nous pouvons aussi exprimer une température en Celsius. La température en Cels
    Ecrire un commentaire pour expliquer cette ligne de code.
 
 Nous pouvons aussi exprimer une température en Fahrenheit avec la formule :
-`Fahrenheits = Celsius * (9/5) + 32`
+`Fahrenheits = celsius * (9/5) + 32`
 
 3. En utilisant cette équation, calculer la température en Fahrenheit et stocker le résultat dans une variable nommée `fahrenheits`. Ecrire un commentaire pour expliquer cette ligne de code.
 
