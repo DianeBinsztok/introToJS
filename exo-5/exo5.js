@@ -32,4 +32,4 @@ resultArray.forEach(element => {
 
 // 8 - Mise en forme du tableau
 prettyArray = resultArray.join().replaceAll(",", " ");
-console.log(prettyArray);
+console.log("Ma string de voyelles :",prettyArray);
