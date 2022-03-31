@@ -1,3 +1,2 @@
-// you can write js here
-
-console.log('exo-5');
+const input = prompt("Entrez une phrase");
+console.log(input);
