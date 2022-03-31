@@ -15,6 +15,10 @@ const choices = [
         name: "scissors",
         boss: "rock",
         biatch: "paper"  
+    },
+    {
+        //cheat code:
+        name: "bomb"
     }
 ];
 
@@ -53,6 +57,8 @@ function findWinner(playerInput, computerInput) {
         console.log("It's a draw!");
     } else if (computerInput.boss == playerInput) {
         console.log("Congratulations, you win!");
+    } else if (playerInput == "bomb") { 
+        console.log("Hey, that's cheating! But I guess you win ¯\_(ツ)_/¯");
     } else {
         console.log("I win!");
    }
