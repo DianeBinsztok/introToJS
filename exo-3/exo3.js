@@ -1,4 +1,5 @@
 // Les choix possibles:
+
 const choices = [
     {
         name: "rock",
