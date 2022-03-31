@@ -33,3 +33,8 @@ secretMessage.reverse().push("Programming"); // Retourner le tableau comme une c
 secretMessage.reverse(); // remettre le tableau à l'endroit
 console.log(secretMessage);
 console.log("5 - ", cleanSentence(secretMessage));
+
+// 6 - Remplacer plusieurs éléments d'un coup
+secretMessage.splice(secretMessage.indexOf("get", "right", "the", "first", "time,"), 5, "know");
+console.log(secretMessage);
+console.log("6 - ", cleanSentence(secretMessage).replace("know", "know,"));
