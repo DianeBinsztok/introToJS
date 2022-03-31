@@ -27,3 +27,9 @@ secretMessage.reverse().pop(); // Retourner le tableau comme une chaussette et p
 secretMessage.reverse(); // remettre le tableau à l'endroit
 console.log(secretMessage);
 console.log("4 - ", cleanSentence(secretMessage));
+
+// 5 - Ajouter un élément en début de tableau
+secretMessage.reverse().push("Programming"); // Retourner le tableau comme une chaussette et ajouter un élément à la fin
+secretMessage.reverse(); // remettre le tableau à l'endroit
+console.log(secretMessage);
+console.log("5 - ", cleanSentence(secretMessage));
