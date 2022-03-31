@@ -9,12 +9,20 @@ function cleanSentence(array) {
 // 1-  Enlever le dernier élément du tableau:
 secretMessage.pop()// renvoie le dernier élément de secretMessage
 console.log(secretMessage);// renvoie le tableau sans son dernier élément
-
-let popped = cleanSentence(secretMessage)
-console.log("1 - " , popped);
+console.log("1 - " , cleanSentence(secretMessage));
 
 // 2 - Ajouter des éléments au tableau:
 secretMessage.push("to", "program");
 console.log(secretMessage);
-let pushed = cleanSentence(secretMessage)
-console.log("2 - ", pushed);
+console.log("2 - ", cleanSentence(secretMessage));
+
+
+// 3 - Modifier un élément du tableau
+
+// a - Repérer l'élément à remplacer:
+console.log(secretMessage.indexOf("easily"));// => 6
+
+// b - Remplacer l'élément à l'index donné:
+secretMessage.splice(6, 1, "right");// => Commencer à l'index 6, changer 1 élément, le remplacer par "right"
+console.log(secretMessage);
+console.log("3 - ", cleanSentence(secretMessage));
