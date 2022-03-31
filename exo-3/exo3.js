@@ -44,7 +44,7 @@ function getPlayerChoice(input) {
 
 // L'ordinateur choisit:
 function getComputerChoice() {
-    let random = Math.floor(Math.random(0, 2)*3);
+    let random = Math.floor(Math.random()*3);
     let computerInput = choices[random];
     console.log("I chose:", computerInput.name);
     return computerInput;

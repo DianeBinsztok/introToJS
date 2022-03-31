@@ -8,12 +8,15 @@ const vowels = ["A","Â","À", "E", "É", "È","Ề","Ë", "I","Ï", "O","Ô", "
 const resultArray = [];
 
 function processInput(userInput) {
-        for (i = 0; i < input.length; i++){
-            let letter = input[i].toUpperCase();
-            if (vowels.indexOf(letter)!= -1) {
-            resultArray.push(letter);
+    for (i = 0; i < input.length; i++) {
+        let letter = input[i].toUpperCase();
+        for (elt of vowels){
+            if (letter == elt) {
+                resultArray.push(letter);
+            }
         }
     }
+    
 }
 processInput(input);
 console.log("Mon tableau de voyelles : ", resultArray);
