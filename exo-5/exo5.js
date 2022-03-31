@@ -10,7 +10,7 @@ const resultArray = [];
 function processInput(userInput) {
         for (i = 0; i < input.length; i++){
             let letter = input[i].toUpperCase();
-            if (vowels.includes(letter)) {
+            if (vowels.indexOf(letter)!= -1) {
             resultArray.push(letter);
         }
     }
