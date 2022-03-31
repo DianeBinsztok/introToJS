@@ -38,3 +38,6 @@ console.log("5 - ", cleanSentence(secretMessage));
 secretMessage.splice(secretMessage.indexOf("get", "right", "the", "first", "time,"), 5, "know");
 console.log(secretMessage);
 console.log("6 - ", cleanSentence(secretMessage).replace("know", "know,"));
+
+// 7 - Affichage avec join:
+console.log("7 - ", secretMessage.join().replaceAll(",", " ").replace("know", "know,"));
