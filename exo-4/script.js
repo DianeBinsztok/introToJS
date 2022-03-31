@@ -17,7 +17,13 @@ console.log(secretMessage);
 console.log("2 - ", cleanSentence(secretMessage));
 
 
-// 3 - Modifier un élément du tableau
+// 3 - Modifier un élément du tableau:
 secretMessage.splice(secretMessage.indexOf("easily"), 1, "right");// => Commencer à l'index de "easily", changer 1 élément, le remplacer par "right"
 console.log(secretMessage);
 console.log("3 - ", cleanSentence(secretMessage));
+
+// 4 - Supprimer le premier élément du tableau:
+secretMessage.reverse().pop(); // Retourner le tableau comme une chaussette et popper le dernier élément
+secretMessage.reverse(); // remettre le tableau à l'endroit
+console.log(secretMessage);
+console.log("4 - ", cleanSentence(secretMessage));
