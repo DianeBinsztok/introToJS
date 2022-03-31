@@ -59,8 +59,10 @@ function findWinner(playerInput, computerInput) {
 
 }
 
+function playGame(){
 const playerChoice = getPlayerChoice(playerInput);
 const computerChoice = getComputerChoice();
-findWinner(playerChoice, computerChoice);
+findWinner(playerChoice, computerChoice);    
+}
 
-
+playGame();
