@@ -18,11 +18,6 @@ console.log("2 - ", cleanSentence(secretMessage));
 
 
 // 3 - Modifier un élément du tableau
-
-// a - Repérer l'élément à remplacer:
-console.log(secretMessage.indexOf("easily"));// => 6
-
-// b - Remplacer l'élément à l'index donné:
-secretMessage.splice(6, 1, "right");// => Commencer à l'index 6, changer 1 élément, le remplacer par "right"
+secretMessage.splice(secretMessage.indexOf("easily"), 1, "right");// => Commencer à l'index de "easily", changer 1 élément, le remplacer par "right"
 console.log(secretMessage);
 console.log("3 - ", cleanSentence(secretMessage));
