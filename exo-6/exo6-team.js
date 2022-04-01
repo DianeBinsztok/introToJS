@@ -108,7 +108,14 @@ function totalScore(array) {
     }
     return score;
 }
-console.log(totalScore(team.games))
+// 4 - Calculer la moyenne des points des équipes adverses:
+function opponentsMediaScore(array) {
+    let totalScore = 0;
+    for (element of array) {
+        totalScore += element.opponentPoints;
+    }
+    return totalScore / array.length;
+}
 
 
 //          ***
@@ -167,8 +174,14 @@ addGame("Rainbow Pooping Seahorses", 12, 200 );
 // Afficher les infos
 displayAllGames(team.games);
 
-// Score total
+// Afficher le score total
 const teamTotalscore = document.createElement("p");
 teamTotalscore.setAttribute("id", "team_total_score");
 teamTotalscore.innerHTML= "Score total de l'équipe: "+totalScore(team.games);
 document.getElementById("games_container").appendChild(teamTotalscore);
+
+// Afficher le score moyen des équipes adverses:
+const opponentScoreMedia = document.createElement("p");
+opponentScoreMedia.setAttribute("id", "team_total_score");
+opponentScoreMedia.innerHTML= "Score moyen des équipes adverses: "+opponentsMediaScore(team.games);
+document.getElementById("games_container").appendChild(opponentScoreMedia);
