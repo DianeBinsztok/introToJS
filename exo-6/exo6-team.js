@@ -1,28 +1,28 @@
 const team = {
     players: [
         {
-            name: "John",
-            lastname: "Smith",
+            firstName: "John",
+            lastName: "Smith",
             age: 29
         },
         {
-            name: "Paul",
-            lastname: "Trucmuche",
+            firstName: "Paul",
+            lastName: "Trucmuche",
             age: 24
         },
         {
-            name: "Frantz",
-            lastname: "Mann",
+            firstName: "Frantz",
+            lastName: "Mann",
             age: 25
         },
         {
-            name: "Mateo",
-            lastname: "Ricci",
+            firstName: "Mateo",
+            lastName: "Ricci",
             age: 24
         },
         {
-            name: "Said",
-            lastname: "Mabrouk",
+            firstName: "Said",
+            lastName: "Mabrouk",
             age: 26
         }
 
@@ -56,3 +56,14 @@ const team = {
     ]
 };
 
+function addPlayer(firstName, lastName, age) {
+    team.players.push(
+        {
+            firstName: firstName,
+            lastName: lastName,
+            age:age
+        }
+    );
+}
+addPlayer("Paul", "Taylor", 28);
+console.log(team.players[5]);
