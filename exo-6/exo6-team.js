@@ -65,5 +65,14 @@ function addPlayer(firstName, lastName, age) {
         }
     );
 }
-addPlayer("Paul", "Taylor", 28);
-console.log(team.players[5]);
+function addGame(opponent, teamPoints, opponentPoints) {
+    team.games.push(
+        {
+            opponent: opponent,
+            teamPoints: teamPoints,
+            opponentPoints:opponentPoints
+        }
+    );
+}
+addGame("The Guys", 45, 55);
+console.log(team.games);
