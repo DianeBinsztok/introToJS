@@ -59,7 +59,7 @@ const team = {
 
 
 
-// Fonctions:
+//      I - Fonctions:
 // 1 - Afficher les infos:
 // - Des joueurs:
 function displayAllPlayers(array) {
@@ -100,7 +100,22 @@ function addGame(opponent, teamPoints, opponentPoints) {
     );
 }
 
-addGame("The Guys", 45, 55);
+// 3 - Calculer la somme des points de mon équipe sur tous les matches joués:
+function totalScore(array) {
+    let score = 0;
+    for (element of array) {
+        score += element.teamPoints;
+    }
+    return score;
+}
+console.log(totalScore(team.games))
+
+
+//          ***
+
+
+
+//      II -  Display: 
 
 // Titres
 const teamh2 = document.createElement("h2");
@@ -131,17 +146,20 @@ displayAllPlayers(team.players);
 
 
 // 2 - Games
+const gamesContainer = document.createElement("div");
+gamesContainer.setAttribute("id", "games_container");
 const gamesh3 = document.createElement("h3");
 gamesh3.setAttribute("id", "gamesTitle");
 gamesh3.innerHTML = "Games :";
-document.getElementById("js_content").appendChild(gamesh3);
+document.getElementById("js_content").appendChild(gamesContainer);
+document.getElementById("games_container").appendChild(gamesh3);
 
 // Liste à puces
 const teamGames = document.createElement("ul");
 teamGames.setAttribute("id", "games");
-document.getElementById("js_content").appendChild(teamGames);
+document.getElementById("games_container").appendChild(teamGames);
 
-// Ajouter quelques joueurs:
+// Ajouter quelques matches:
 addGame("Random Team", 28, 41 );
 addGame("Other People", 40, 38 );
 addGame("Rainbow Pooping Seahorses", 12, 200 );
@@ -149,4 +167,8 @@ addGame("Rainbow Pooping Seahorses", 12, 200 );
 // Afficher les infos
 displayAllGames(team.games);
 
-
+// Score total
+const teamTotalscore = document.createElement("p");
+teamTotalscore.setAttribute("id", "team_total_score");
+teamTotalscore.innerHTML= "Score total de l'équipe: "+totalScore(team.games);
+document.getElementById("games_container").appendChild(teamTotalscore);
