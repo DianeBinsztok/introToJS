@@ -36,6 +36,9 @@ bathroomNumber.innerHTML = ("Number of bathrooms: " + (joeInfo.bathrooms - 2));
 list.appendChild(bathroomNumber);
 
 //      3. Joe vient d'acquérir un garage. Afficher cette nouvelle information. 
-
+const garage = document.createElement("li");
+joeInfo.garage = true;
+garage.innerHTML = ("Owns a garage: " + joeInfo.garage);
+list.appendChild(garage);
 
 
