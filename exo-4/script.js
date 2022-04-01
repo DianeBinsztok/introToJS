@@ -23,14 +23,16 @@ console.log(secretMessage);
 console.log("3 - ", cleanSentence(secretMessage));
 
 // 4 - Supprimer le premier élément du tableau:
-secretMessage.reverse().pop(); // Retourner le tableau comme une chaussette et popper le dernier élément
-secretMessage.reverse(); // remettre le tableau à l'endroit
+//secretMessage.reverse().pop(); // Retourner le tableau comme une chaussette et popper le dernier élément
+//secretMessage.reverse(); // remettre le tableau à l'endroit
+secretMessage.shift();
 console.log(secretMessage);
 console.log("4 - ", cleanSentence(secretMessage));
 
 // 5 - Ajouter un élément en début de tableau
-secretMessage.reverse().push("Programming"); // Retourner le tableau comme une chaussette et ajouter un élément à la fin
-secretMessage.reverse(); // remettre le tableau à l'endroit
+//secretMessage.reverse().push("Programming"); // Retourner le tableau comme une chaussette et ajouter un élément à la fin
+//secretMessage.reverse(); // remettre le tableau à l'endroit
+secretMessage.splice(0, 0, "Programming");
 console.log(secretMessage);
 console.log("5 - ", cleanSentence(secretMessage));
 

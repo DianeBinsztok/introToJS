@@ -56,6 +56,30 @@ const team = {
     ]
 };
 
+
+
+
+// Fonctions:
+// 1 - Afficher les infos:
+// - Des joueurs:
+function displayAllPlayers(array) {
+    for (let element of array) {
+        const teamPlayersInfo = document.createElement("li");
+        teamPlayersInfo.innerHTML = element.firstName+" "+element.lastName+", age "+element.age;
+        teamPlayers.appendChild(teamPlayersInfo);
+    }
+}
+// - Des matches:
+function displayAllGames(array) {
+    for (let element of array) {
+        const teamGamesInfo = document.createElement("li");
+        teamGamesInfo.innerHTML = element.teamPoints+ " - "+element.opponentPoints+" vs "+element.opponent;
+        teamGames.appendChild(teamGamesInfo);
+    }
+}
+
+// 2 - Ajouter des infos:
+// - Des joueurs:
 function addPlayer(firstName, lastName, age) {
     team.players.push(
         {
@@ -65,6 +89,7 @@ function addPlayer(firstName, lastName, age) {
         }
     );
 }
+// - Des matches
 function addGame(opponent, teamPoints, opponentPoints) {
     team.games.push(
         {
@@ -74,5 +99,54 @@ function addGame(opponent, teamPoints, opponentPoints) {
         }
     );
 }
+
 addGame("The Guys", 45, 55);
-console.log(team.games);
+
+// Titres
+const teamh2 = document.createElement("h2");
+teamh2.setAttribute("id", "team");
+teamh2.innerHTML = "Team info :";
+document.getElementById("js_content").appendChild(teamh2);
+
+
+// 1 - Players
+const playersh3 = document.createElement("h3");
+playersh3.setAttribute("id", "playersTitle");
+playersh3.innerHTML = "Players :";
+document.getElementById("js_content").appendChild(playersh3);
+
+// Liste à puces
+const teamPlayers = document.createElement("ul");
+teamPlayers.setAttribute("id", "players");
+document.getElementById("js_content").appendChild(teamPlayers);
+
+// Ajouter quelques joueurs:
+addPlayer("Pablo", "Picasso", "45");
+addPlayer("Pierre", "Random", "19");
+addPlayer("Rafaelo", "Santi", "25");
+
+// Afficher les infos
+displayAllPlayers(team.players);
+
+
+
+// 2 - Games
+const gamesh3 = document.createElement("h3");
+gamesh3.setAttribute("id", "gamesTitle");
+gamesh3.innerHTML = "Games :";
+document.getElementById("js_content").appendChild(gamesh3);
+
+// Liste à puces
+const teamGames = document.createElement("ul");
+teamGames.setAttribute("id", "games");
+document.getElementById("js_content").appendChild(teamGames);
+
+// Ajouter quelques joueurs:
+addGame("Random Team", 28, 41 );
+addGame("Other People", 40, 38 );
+addGame("Rainbow Pooping Seahorses", 12, 200 );
+
+// Afficher les infos
+displayAllGames(team.games);
+
+
